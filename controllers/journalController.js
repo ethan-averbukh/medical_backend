@@ -6,9 +6,12 @@ const router = express.Router();
 
 //get journal Route
 router.get('/', async(req,res)=>{
-    const journal = await Journal.find({}).populate('notes')
+    const journal = await Journal.find({}).populate("Notes")
+    res.json({
+        status: 200,
+        data: journal
+    })
 })
-
 
 //post Journal Route
 router.post('/', async(req,res)=>{

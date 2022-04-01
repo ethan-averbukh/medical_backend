@@ -13,7 +13,7 @@ app.use(cors());
 
 
 const journalController = require('./controllers/journalController');
-app.use('/Journal', journalController);
+app.use('/Journals', journalController);
 
 const noteController = require('./controllers/noteController');
 app.use('/Notes', noteController)
